@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Container } from 'components/Container'
 
-export default function Before() {
+export default function Priority() {
   return (
     <Container>
       <Link href="/">

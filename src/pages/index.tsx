@@ -53,8 +53,8 @@ export default function Home() {
             </li>
 
             <li>
-              <Link href="/very-low-quality">
-                <a>Very low quality</a>
+              <Link href="/low-quality">
+                <a>Low quality</a>
               </Link>
             </li>
 

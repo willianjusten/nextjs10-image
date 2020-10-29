@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import { Container } from 'components/Container'
 
-export default function Before() {
+export default function After() {
   return (
     <Container>
       <Link href="/">
