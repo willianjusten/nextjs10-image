@@ -28,7 +28,11 @@ export default function Home() {
       <div>
         <h1>NextJS 10 - Image Optimization</h1>
         <p>
-          You can <a href="#">watch this video to explanations (pt-br)</a> and{' '}
+          You can{' '}
+          <a href="https://youtu.be/xkkSiYitZbM">
+            watch this video to explanations (pt-br)
+          </a>{' '}
+          and{' '}
           <a href="https://github.com/willianjusten/nextjs10-image">
             code here.
           </a>
