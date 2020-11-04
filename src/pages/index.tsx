@@ -49,13 +49,37 @@ export default function Home() {
 
             <li>
               <Link href="/unsized">
-                <a>After - unsized images</a>
+                <a>After - unsized images (Deprecated)</a>
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/fixed">
+                <a>After - fixed images (Non responsiveness)</a>
               </Link>
             </li>
 
             <li>
               <Link href="/after">
-                <a>After - defined sizes</a>
+                <a>After - defined sizes (intrinsic mode)</a>
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/after-fill">
+                <a>After - not defined sizes (fill mode)</a>
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/after-responsive">
+                <a>After - defined sizes (responsive mode)</a>
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/styled-image">
+                <a>After - styled images</a>
               </Link>
             </li>
 
