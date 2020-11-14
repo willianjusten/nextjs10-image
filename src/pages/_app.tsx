@@ -1,4 +1,4 @@
-import { AppProps } from 'next/app'
+import { AppProps, NextWebVitalsMetric } from 'next/app'
 import Head from 'next/head'
 
 import GlobalStyles from 'styles/global'
@@ -20,6 +20,45 @@ function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
     </>
   )
+}
+
+export function reportWebVitals(metric: NextWebVitalsMetric) {
+  switch (metric.name) {
+    case 'LCP': {
+      const { value } = metric
+
+      let score
+      if (value <= 2500) {
+        score = '🟢 Good'
+      } else if (value > 2500 && value <= 4000) {
+        score = '🟠 Needs Improvements'
+      } else if (value > 4000) {
+        score = '🔴 Poor'
+      }
+
+      const formatted = (value / 1000).toFixed(2)
+
+      console.log(`🖼️ Largest Contentful Paint: ${score} - ${formatted}s`)
+      break
+    }
+    case 'CLS': {
+      const { value } = metric
+
+      let score
+      if (value <= 0.1) {
+        score = '🟢 Good'
+      } else if (value > 0.1 && value <= 0.25) {
+        score = '🟠 Needs Improvements'
+      } else if (value > 0.25) {
+        score = '🔴 Poor'
+      }
+
+      console.log(`🔽 Cumulative Layout Shift: ${score}`)
+      break
+    }
+    default:
+      break
+  }
 }
 
 export default App
